@@ -8,7 +8,7 @@
 		 (funcall f)))))
 
 ;; C-h to Backspace
-(eval-when-frame-is-created (keyboard-translate ?\C-h ?\C-?))
+(eval-when-frame-is-created (lambda () (keyboard-translate ?\C-h ?\C-?)))
 
 ;;; erase evil bars
 (menu-bar-mode -1)
