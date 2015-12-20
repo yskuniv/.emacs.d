@@ -1,24 +1,38 @@
-;; -*- lexical-binding: t -*-
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-(defun eval-when-frame-is-created (f)
-  (funcall f)
-  (add-hook 'after-make-frame-functions
-	    '(lambda (frame)
-	       (with-selected-frame frame
-		 (funcall f)))))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
 
-;; C-h to Backspace
-(eval-when-frame-is-created (lambda () (keyboard-translate ?\C-h ?\C-?)))
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(setq el-get-user-package-directory "~/.emacs.d/el-get-init-files/")
 
-;;; erase evil bars
+;; (el-get 'sync)
+
+(el-get-bundle helm)
+(el-get-bundle auto-complete)
+(el-get-bundle ddskk)
+(el-get-bundle paredit)
+(el-get-bundle magit)
+
+;; C-h
+(keyboard-translate ?\C-h ?\C-?)
+
+;; bar
 (menu-bar-mode -1)
-(if (window-system)
-    (eval-when-frame-is-created
-     (lambda ()
-       (tool-bar-mode -1)
-       (toggle-scroll-bar -1))))
+(tool-bar-mode -1)
 
-;; font color
-(add-to-list 'default-frame-alist '(cursor-color . "gray"))
-(add-to-list 'default-frame-alist '(foreground-color . "gray"))
-(add-to-list 'default-frame-alist '(background-color . "black"))
+;; kill gnu emacs buffer
+(setq inhibit-startup-message t)
+
+;; (load-theme 'monoj-dark t)
+
+(show-paren-mode t)
+
+;; load local/init.el
+(let ((local-initel "~/.emacs.d/local/init.el"))
+  (if (file-exists-p local-initel)
+      (load-file local-initel)))
