@@ -1,5 +1,14 @@
+# Backup files
+*~
+
 # Compiled
 *.elc
 
 # Packaging
 .cask
+
+/ac-comphist.dat
+/auto-save-list/
+/el-get/
+/local/
+/recentf
