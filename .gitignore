@@ -1,14 +1,56 @@
-# Backup files
+
+# Created by https://www.gitignore.io/api/emacs
+# Edit at https://www.gitignore.io/?templates=emacs
+
+### Emacs ###
+# -*- mode: gitignore; -*-
 *~
-
-# Compiled
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
 *.elc
+auto-save-list
+tramp
+.\#*
 
-# Packaging
-.cask
+# Org-mode
+.org-id-locations
+*_archive
 
-/ac-comphist.dat
-/auto-save-list/
-/el-get/
-/local/
-/recentf
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
+
+# network security
+/network-security.data
+
+
+# End of https://www.gitignore.io/api/emacs
