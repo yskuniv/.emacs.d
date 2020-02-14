@@ -40,25 +40,15 @@
 
 ;;; etc
 
+(setq inhibit-startup-message t)
 
-;; C-h
-
-;; bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
-;; kill gnu emacs buffer
-(setq inhibit-startup-message t)
-
-;; (load-theme 'monoj-dark t)
-
 (show-paren-mode t)
-
-;;; line number
 (global-linum-mode t)
-
-;;; highlight current line
 (global-hl-line-mode t)
+
 
 ;;;
 ;;; global whitespace mode
