@@ -48,21 +48,3 @@
 (show-paren-mode t)
 (global-linum-mode t)
 (global-hl-line-mode t)
-
-
-;;;
-;;; global whitespace mode
-;;;
-
-(setq whitespace-style			'(face spaces trailing space-before-tab newline indentation empty space-after-tab space-mark)
-      whitespace-space-regexp		"\\(　+\\)"
-      whitespace-display-mappings	'((space-mark		?　	[?・])
-					  (newline-mark		?\n	[?$ ?\n])
-					  (tab-mark		?\t	[?\\ ?\t])))
-
-(global-whitespace-mode t)
-
-;; load local/init.el
-(let ((local-initel "~/.emacs.d/local/init.el"))
-  (if (file-exists-p local-initel)
-      (load-file local-initel)))
