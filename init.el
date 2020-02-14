@@ -38,6 +38,13 @@
 (global-set-key (kbd "M-0") 'delete-window)
 
 
+;;; appearance
+
+(load-theme 'misterioso t)
+
+(add-to-list 'default-frame-alist '(alpha . 95))
+
+
 ;;; etc
 
 (setq inhibit-startup-message t)
