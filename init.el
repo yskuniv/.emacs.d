@@ -29,6 +29,14 @@
 (el-get-bundle paredit)
 (el-get-bundle magit)
 
+
+;;; key bindings
+
+
+
+;;; etc
+
+
 ;; C-h
 (keyboard-translate ?\C-h ?\C-?)
 
