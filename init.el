@@ -32,13 +32,16 @@
 
 ;;; key bindings
 
+(keyboard-translate ?\C-h ?\C-?)
+
+(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "M-0") 'delete-window)
 
 
 ;;; etc
 
 
 ;; C-h
-(keyboard-translate ?\C-h ?\C-?)
 
 ;; bar
 (menu-bar-mode -1)
