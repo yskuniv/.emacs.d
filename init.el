@@ -22,10 +22,10 @@
 
 (el-get 'sync)
 
-(setq dired-bind-jump nil)		; for ddskk
+;; (setq dired-bind-jump nil)		; for ddskk
 (el-get-bundle helm)
 (el-get-bundle auto-complete)
-(el-get-bundle ddskk)
+;; (el-get-bundle ddskk)
 (el-get-bundle paredit)
 (el-get-bundle magit)
 
