@@ -24,7 +24,6 @@
 (el-get-bundle helm)
 (el-get-bundle auto-complete)
 ;; (el-get-bundle ddskk)
-(el-get-bundle paredit)
 (el-get-bundle magit)
 
 (el-get 'sync)
