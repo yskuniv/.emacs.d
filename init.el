@@ -20,14 +20,12 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (setq el-get-user-package-directory "~/.emacs.d/el-get-init-files/")
 
-(el-get 'sync)
-
-;; (setq dired-bind-jump nil)		; for ddskk
 (el-get-bundle helm)
 (el-get-bundle auto-complete)
 ;; (el-get-bundle ddskk)
-(el-get-bundle paredit)
 (el-get-bundle magit)
+
+(el-get 'sync)
 
 
 ;;; key bindings
@@ -41,8 +39,6 @@
 ;;; appearance
 
 (load-theme 'misterioso t)
-
-(add-to-list 'default-frame-alist '(alpha . 95))
 
 
 ;;; etc
