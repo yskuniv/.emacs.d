@@ -40,8 +40,6 @@
 
 (load-theme 'misterioso t)
 
-(add-to-list 'default-frame-alist '(alpha . 95))
-
 
 ;;; etc
 
